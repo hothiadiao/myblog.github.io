@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block content %} 
+<span class="pull-right"><a class="btn btn-danger deleteOne" href="/destroy/{{article.id}}">Supprimer</a></span>
+
+<h1>{{article.title}}</h1>
+<h2>Rédigé par {{article.author}}</h2>
+<p>{{article.content}}</p>
+<span class="date">
+    Mise à jour {{article.updated.getDate()}} / {{article.updated.getMonth() +1}} / {{article.updated.getFullYear()}} / {{article.updated.getHours()}}H:{{article.updated.getMinutes()}} MN
+</span>
+   <span class="pull-right"> <a class="btn btn-primary" href="/edit/{{article.id}}" >Modifier</a></span>
+
+
+{% endblock %}

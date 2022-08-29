@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %} 
+
+<form role="form" action="/store" method="post">
+    <div class="form-group">
+        <label for="titre">Titre</label>
+        <input type="text" name="titre" placeholder="Titre de l'article" required>
+    </div>
+    <div class="form-group">
+        <label for="auteur">Auteur</label>
+        <input type="text" name="auteur" placeholder="Auteur de l'article" required>
+    </div>
+
+    <div class="form-group">
+        <label for="contenu">Contenu de l'article</label>
+        <textarea name="contenu" class="form-control" placeholder="contenu de l'article" rows="3" required></textarea>
+    </div> 
+ <button type="submit" class="btn btn-primary">Ajouter</button>
+    
+</form>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+{% block content %} 
+
+<form role="form" action="/update/{{article.id}}" method="post">
+    <div class="form-group">
+        <label for="titre">Titre</label>
+        <input type="text" name="titre" value="{{article.title}}" placeholder="{{article.content}}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="auteur">Auteur</label>
+        <input type="text" name="auteur" class="form-control" placeholder="{{article.author}}" required>
+    </div>
+
+
+    <div class="form-group">
+        <label for="contenu">Contenu de l'article</label>
+        <textarea name="contenu" class="form-control" placeholder="{{article.content}}" rows="3" required></textarea>
+    </div> 
+ <button type="submit" class="btn btn-success">Modifier</button>
+    
+</form>
+
+{% endblock %}
